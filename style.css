@@ -7,3 +7,67 @@ Author URI:     https://wpgenius.in
 Template:       wplms
 Version:        0.1.0
 */
+
+/********** 404 ERROR PAGE *********/
+.error-page-wrapper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.error-page-wrapper h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.error-page-wrapper h4 {
+    font-size: 17px;
+    text-align: center;
+}
+
+.error-page-wrapper input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid rgba(0,0,0,.08);
+}
+
+.error-page-wrapper .col-md-8 {
+    text-align: center;
+}
+
+.error-page-wrapper .course-button a {
+    font-size: 15px;
+}
+
+.error-page-wrapper  .course-button {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.error-page-wrapper .Categories ul {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.error-page-wrapper .widget ul li {
+    width: auto;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: none;
+}
+
+.error-page-wrapper .widget ul li a {
+    font-weight: 700;
+}
+
+.search_wrapper {
+    position: relative;
+}
+
+.error-page-wrapper .search_wrapper:after {
+    content: "\e0c6";
+    font-family: fonticon;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+}
