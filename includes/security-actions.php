@@ -119,3 +119,73 @@ function wplms_dns_prefetch( $urls, $relation_type ) {
 
 	return $urls;
 }
+
+/**
+ * Remove unwanted post types and code.
+ *
+ * @return void
+ */
+function remove_unwanted_post_types(){	
+	if( is_admin() && !is_wpg_user() ){	
+		unregister_post_type('payments');
+		unregister_post_type('certificate');
+	}
+}
+add_action( 'init', 'remove_unwanted_post_types' , 20);
+
+/**
+ * Hide unwanted links to non WPG user.
+ *
+ * @return void
+ */
+function hide_unwanted_links(){
+ 	if( !is_wpg_user() ){
+		//remove menu
+		remove_submenu_page( 'index.php', 'wplms-about' );
+		remove_submenu_page( 'themes.php', 'wplms-setup' );
+		remove_submenu_page( 'themes.php', 'wplms-setup&export' );
+		remove_submenu_page( 'themes.php', 'install-required-plugins' );
+		remove_submenu_page( 'lms', 'lms-settings&tab=live' );
+		remove_submenu_page( 'lms', 'lms-settings&tab=addons' );
+		remove_menu_page( 'wplms_options' );
+		remove_menu_page( 'elementor' );
+		remove_submenu_page( 'woocommerce', 'wc-status' );
+		remove_submenu_page( 'woocommerce', 'wc-addons' );
+		remove_submenu_page( 'users.php', 'bp-profile-setup' );
+		add_filter( 'wplms_lms_settings_tabs', 'cmp_remove_settings_tabs');
+		add_filter( 'wplms_lms_commission_tabs', 'cmp_remove_wplms_lms_commission_tabs');
+		//Hide links using css
+		?>
+        <style type="text/css">
+			#menu-plugins, #menu-settings, 
+			.theme.add-new-theme, div[data-slug="wplms"], .themes-php .page-title-action{ display:none; }
+		</style>
+        <?php	
+	}
+}
+add_action( 'admin_print_scripts', 'hide_unwanted_links');
+
+/**
+ * Remove unwanted setting tab from lms settings.
+ *
+ * @param [array] $args
+ * @return void
+ */
+function cmp_remove_settings_tabs( $args ){
+	unset( $args [ 'addons' ] );
+	unset( $args [ 'api' ] );
+	unset( $args [ 'live' ] );
+	unset( $args [ 'commissions' ] );
+	unset( $args [ 'functions' ] );
+	return $args;
+}
+
+/**
+ * Remove wplms commission tabs
+ *
+ * @param [array] $args
+ * @return void
+ */
+function cmp_remove_wplms_lms_commission_tabs( $args ){
+	return array( 'general' => $args['general'] );
+}
