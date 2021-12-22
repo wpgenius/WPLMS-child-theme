@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Action for WPLMS
+ * Options for WPLMS
  *
  * @author      Makarand Mane
  * @category    Admin
