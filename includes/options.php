@@ -9,7 +9,13 @@
  * @version     1.0
  */
 
-add_filter('wplms_email_settings', 'cmp_wplms_email_settings', 9999);
+/**
+ * Settings for wplms Emails.
+ * - Reply to email address
+ *
+ * @param [type] $settings
+ * @return void
+ */
 function cmp_wplms_email_settings($settings)
 {
 
@@ -24,3 +30,4 @@ function cmp_wplms_email_settings($settings)
 
     return array_merge(array_slice($settings, 0, 2), $new_option, array_slice($settings, 2));
 }
+add_filter('wplms_email_settings', 'cmp_wplms_email_settings', 9999);
