@@ -92,3 +92,18 @@ function wplms_all_course_page_link( $url ) {
 }
 add_filter( 'woocommerce_return_to_shop_redirect' , 'wplms_all_course_page_link' );
 
+/**
+ * shop page redirect to all courses page
+ *
+ * @return void
+ */
+function wplms_shop_page_redirect() {
+    if( is_shop() ){
+		$bp_pages = get_option('bp-pages');
+		$courses_page_id = $bp_pages['course'];
+        wp_redirect( get_permalink( $courses_page_id ) );
+        exit();
+    }
+}
+add_action( 'template_redirect', 'wplms_shop_page_redirect' );
+
