@@ -71,3 +71,24 @@ function wplms_replace_words( $translated ) {
 }
 add_filter( 'gettext', 'wplms_replace_words', 20 );
 
+/**
+ * Change label of return to shop button
+ *
+ * @return void
+ */
+function wplms_return_to_shop_text(){
+    return __( 'Browse All courses', 'woocommerce' );
+} 
+add_filter( 'woocommerce_return_to_shop_text', 'wplms_return_to_shop_text' );
+
+/**
+ * change return to shop link to all course page
+ *
+ * @param [string] $url
+ * @return string
+ */
+function wplms_all_course_page_link( $url ) {
+	return get_permalink( vibe_get_bp_page_id( 'course' ) );
+}
+add_filter( 'woocommerce_return_to_shop_redirect' , 'wplms_all_course_page_link' );
+
