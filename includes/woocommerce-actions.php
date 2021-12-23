@@ -49,3 +49,25 @@ function wplms_tax_label( $label ) {
 }
 add_filter( 'woocommerce_countries_ex_tax_or_vat', 'wplms_tax_label', 20 );
 
+/**
+ * Replace words in WooCommerce and WPLMS
+ * -need to #remove this in future
+ *
+ * @param [string] $translated
+ * @return string
+ */
+function wplms_replace_words( $translated ) {
+
+    if( is_admin(  ) )
+        return $translated;
+
+    $text = array(
+        'Product' => 'Course',
+        'product' => 'course',
+        'Browse products' => 'Browse Courses'
+    );
+    $translated = str_ireplace(  array_keys($text),  $text,  $translated );
+    return $translated;
+}
+add_filter( 'gettext', 'wplms_replace_words', 20 );
+
