@@ -241,3 +241,7 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit.signbtn {
     border: 1px solid white;
 }
 
+/** Mailchimp for wordpress */
+.mc4wp-checkbox label > span {
+    margin-left: 10px;
+}
