@@ -8,7 +8,7 @@
  * @package     Initialization
  * @version     1.0
  */
-
+ 
 /**
  * Hide virtual and downloadable option and set virtual type by default.
  *
@@ -140,3 +140,9 @@ add_filter( 'woocommerce_order_item_permalink', '__return_empty_string');
  */
 add_filter( 'woocommerce_order_item_needs_processing', '__return_false' );
 
+/**
+ * Remove order again button from thank you page
+ *
+ * @return void
+ */
+remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
