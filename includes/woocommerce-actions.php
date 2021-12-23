@@ -107,3 +107,20 @@ function wplms_shop_page_redirect() {
 }
 add_action( 'template_redirect', 'wplms_shop_page_redirect' );
 
+/**
+ * Removes Order Notes Title - Additional Information & Notes Field
+ */ 
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
+
+/**
+ * Remove Order Notes Field
+ *
+ * @param [array] $fields
+ * @return array
+ */
+function remove_order_notes( $fields ) {
+     unset($fields['order']['order_comments']);
+     return $fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'remove_order_notes' );
+
