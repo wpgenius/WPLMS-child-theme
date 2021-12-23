@@ -62,6 +62,25 @@ ul.topmenu .vbpcart  span.vicon-shopping-cart.active:after {
     position: absolute;
 }
 
+/******** COURSE PAGE *********/
+.course_curriculum .course_lesson span {
+    font-size: 13px !important;
+   text-transform: capitalize !important;
+}
+.course_curriculum .course_lesson .curriculum-icon > i { 
+    font-size: 18px !important;
+}
+ul.course_curriculum li.course_section>label {
+    font-size: 1.4rem !important;
+}
+.course_curriculum .course_lesson span.time i {
+    font-size: 1.1em !important;
+   color: #D2355D !important;
+}
+.course_curriculum .course_lesson .free {
+    font-size: 11px !important;
+}
+
 /********** 404 ERROR PAGE *********/
 .error-page-wrapper {
     padding-top: 30px;
