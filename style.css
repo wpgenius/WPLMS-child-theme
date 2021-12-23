@@ -71,3 +71,22 @@ Version:        0.1.0
     top: 20px;
     right: 90px;
 }
+
+/* WooCommerce */
+.woocommerce-order-details table {
+    background: #fdfdfd;
+    border: 1px solid rgba(0,0,0,.08);
+}
+.woocommerce table.shop_table td{
+    padding: 15px;
+}
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table tbody th,.woocommerce table.shop_table tfoot td,.woocommerce table.shop_table tfoot th {
+    font-weight: 600;
+}
+.woocommerce-customer-details + h3{
+    margin-top: 30px;
+}
+.course_order_details{
+    margin: 30px 0;
+}
