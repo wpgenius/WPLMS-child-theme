@@ -33,3 +33,8 @@ function wplms_hide_and_enable_virtual_by_default(){
 }
 add_action( 'woocommerce_product_options_general_product_data', 'wplms_hide_and_enable_virtual_by_default' );
 
+/**
+ * Force WooCommerce products to be sold individually
+ */
+add_filter( 'woocommerce_is_sold_individually', '__return_true' );
+
