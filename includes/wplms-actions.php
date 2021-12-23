@@ -9,12 +9,13 @@
  * @version     1.0
  */
 
-/**
- * Add reply to email address in BuddyPress emails.
- */
-add_filter('bp_email_set_reply_to', 'cmp_reply_to_email', 999);
-function cmp_reply_to_email($retval)
-{
+ /**
+  * Add reply to email address in BuddyPress emails.
+  *
+  * @param [string] $reply_to
+  * @return string
+  */
+function cmp_reply_to_email($reply_to){
     if (class_exists('WPLMS_tips')) {
         $wplms_settings = WPLMS_tips::init();
         $settings = $wplms_settings->lms_settings;
@@ -26,5 +27,6 @@ function cmp_reply_to_email($retval)
         return new BP_Email_Recipient($settings['email_settings']['reply_to_email']);
     }
 
-    return $retval;
+    return $reply_to;
 }
+add_filter('bp_email_set_reply_to', 'cmp_reply_to_email', 999);

@@ -7,3 +7,264 @@ Author URI:     https://wpgenius.in
 Template:       wplms
 Version:        0.1.0
 */
+/****** COMMON CSS *******/
+body, p {
+    font-weight: 300;
+}
+b, dt, strong, h1 a, h2 a, h3 a, h4 a {
+    font-weight: 600;
+}
+blockquote+p, h3+p, ol+ul, p+blockquote, p+h3, p+p, p+ul, ul+ol, ul+p {
+    margin-top: 15px;
+}
+.content h4 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.content>ul {
+    margin-left: 20px;
+}
+.content>ul li {
+    font-weight: 300;
+    line-height: 21px;
+    padding-bottom: 10px;
+}
+
+/******** HEADER *********/
+.loginpopup_wrapper{
+	background: var(--primary)!important;
+}
+.login_popup_content.email_login .extra_details p:first-child {
+    font-size: 16px !important;
+}
+.login_popup_content.email_login p{
+	line-height: 18px !important;
+	font-size: 12px !important;
+}
+.login_popup_content{
+	max-width: 410px !important;
+}
+.sleek .vbpcart.active:after {
+    border: 10px solid;
+    bottom: -20px;
+}
+ul.topmenu a.vbpcart {
+    padding: 0 !IMPORTANT;
+    top: 25px;
+    line-height: 0;
+}
+ul.topmenu .vbpcart  span.vicon-shopping-cart.active:after {
+    border: 10px solid;
+    border-color: transparent transparent #fafafa transparent;
+    content: '';
+    bottom: -22px;
+    right: 0;
+    position: absolute;
+}
+
+/********* HOME PAGE *********/
+
+
+/********** FOOTER **********/
+
+
+/******** COURSE PAGE *********/
+.course_curriculum .course_lesson span {
+    font-size: 13px !important;
+   text-transform: capitalize !important;
+}
+.course_curriculum .course_lesson .curriculum-icon > i { 
+    font-size: 18px !important;
+}
+ul.course_curriculum li.course_section>label {
+    font-size: 1.4rem !important;
+}
+.course_curriculum .course_lesson span.time i {
+    font-size: 1.1em !important;
+   color: #D2355D !important;
+}
+.course_curriculum .course_lesson .free {
+    font-size: 11px !important;
+}
+
+/********** 404 ERROR PAGE *********/
+.error-page-wrapper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.error-page-wrapper h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.error-page-wrapper h4 {
+    font-size: 17px;
+    text-align: center;
+}
+
+.error-page-wrapper input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid rgba(0,0,0,.08);
+}
+
+.error-page-wrapper .col-md-8 {
+    text-align: center;
+}
+
+.error-page-wrapper .course-button a {
+    font-size: 15px;
+}
+
+.error-page-wrapper  .course-button {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.error-page-wrapper .Categories ul {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.error-page-wrapper .widget ul li {
+    width: auto;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: none;
+}
+
+.error-page-wrapper .widget ul li a {
+    font-weight: 700;
+}
+
+.search_wrapper {
+    position: relative;
+}
+
+.error-page-wrapper .search_wrapper:after {
+    content: "\e0c6";
+    font-family: fonticon;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+}
+
+/*********** BLOG PAGE *********/
+.blogpost_author strong {
+    font-weight: 400;
+    font-size: 15px;
+}
+.blog .content {
+    padding-left: 0;
+}
+/* blog post layout 3*/
+.blogpost_style3 .link {
+    margin-left: 0;
+}
+.blogpost_style3 h3 {
+    font-size: 21px;
+}
+.blogpost_style3 h3 a {
+    font-weight: 600;
+}
+.blogpost_style3 .post-categories li {
+    color: #ffffff;
+    background: #D2355D;
+    padding: 2px 4px 2px 8px;
+}
+.blogpost_style3 .post-categories li a {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #ffffff;
+}
+/* WooCommerce */
+.woocommerce-order-details table {
+    background: #fdfdfd;
+    border: 1px solid rgba(0,0,0,.08);
+}
+.woocommerce table.shop_table td{
+    padding: 15px;
+}
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table tbody th,.woocommerce table.shop_table tfoot td,.woocommerce table.shop_table tfoot th {
+    font-weight: 600;
+}
+.woocommerce-customer-details + h3{
+    margin-top: 30px;
+}
+.course_order_details{
+    margin: 30px 0;
+}
+
+
+/********** CONTACT FORM ********/
+body:not(.cf7p-message) .wpcf7-not-valid-tip {
+    position: absolute!important;
+    left: -52px !important;
+    top: -5px !important;
+    width: 44px!important;
+    height: 44px!important;
+    padding: 0!important;
+    background-color: #ED3B2E;
+    text-indent: -9999px!important;
+    padding: 0;
+    border: none!important;
+}
+.wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+}
+body:not(.cf7p-message) .wpcf7-not-valid-tip:before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    background-color: #ed3b2e;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+}
+body:not(.cf7p-message) .wpcf7-not-valid-tip:after {
+    content: '\00d7';
+    position: absolute;
+    left: 18px;
+    top: 2px;
+    font-size: 25px;
+    color: #fff;
+    text-indent: 0;
+}
+input.wpcf7-form-control.has-spinner.wpcf7-submit.signbtn {
+    border: 1px solid white;
+}
+
+/** Mailchimp for wordpress */
+.mc4wp-checkbox label > span {
+    margin-left: 10px;
+}
+
+/** Resposive CSS for WordPress */
+
+@media (min-width:992px) and (max-media:1199px){
+    /** CSS for middle device */
+	
+}
+@media (min-width:992px){
+    /** CSS for middle & large device */
+
+}
+@media (max-width:991px){
+    /** CSS for tablet & mobile device */
+
+}
+@media (min-width:768px){
+    /** CSS for tablet, middle & large device */
+
+}
+@media (max-width:767px){
+    /** CSS for mobile device */
+
+}

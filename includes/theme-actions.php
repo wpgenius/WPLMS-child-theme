@@ -8,3 +8,21 @@
  * @package     Initialization
  * @version     1.0
  */
+
+/**
+ * Remove Gutenberg Block Library CSS from loading on the frontend
+ *
+ * @return void
+ */
+function remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'bp-member-block' );
+    wp_dequeue_style( 'wc-block-style' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+   }
+add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css' );
+
+/**
+ * Fully Disable Gutenberg editor.
+ */
+add_filter('use_block_editor_for_post_type', '__return_false', 10); 
