@@ -245,3 +245,26 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit.signbtn {
 .mc4wp-checkbox label > span {
     margin-left: 10px;
 }
+
+/** Resposive CSS for WordPress */
+
+@media (min-width:992px) and (max-media:1199px){
+    /** CSS for middle device */
+	
+}
+@media (min-width:992px){
+    /** CSS for middle & large device */
+
+}
+@media (max-width:991px){
+    /** CSS for tablet & mobile device */
+
+}
+@media (min-width:768px){
+    /** CSS for tablet, middle & large device */
+
+}
+@media (max-width:767px){
+    /** CSS for mobile device */
+
+}
