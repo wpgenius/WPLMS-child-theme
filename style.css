@@ -30,6 +30,38 @@ blockquote+p, h3+p, ol+ul, p+blockquote, p+h3, p+p, p+ul, ul+ol, ul+p {
     padding-bottom: 10px;
 }
 
+/******** HEADER *********/
+.loginpopup_wrapper{
+	background: var(--primary)!important;
+}
+.login_popup_content.email_login .extra_details p:first-child {
+    font-size: 16px !important;
+}
+.login_popup_content.email_login p{
+	line-height: 18px !important;
+	font-size: 12px !important;
+}
+.login_popup_content{
+	max-width: 410px !important;
+}
+.sleek .vbpcart.active:after {
+    border: 10px solid;
+    bottom: -20px;
+}
+ul.topmenu a.vbpcart {
+    padding: 0 !IMPORTANT;
+    top: 25px;
+    line-height: 0;
+}
+ul.topmenu .vbpcart  span.vicon-shopping-cart.active:after {
+    border: 10px solid;
+    border-color: transparent transparent #fafafa transparent;
+    content: '';
+    bottom: -22px;
+    right: 0;
+    position: absolute;
+}
+
 /********** 404 ERROR PAGE *********/
 .error-page-wrapper {
     padding-top: 30px;
