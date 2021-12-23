@@ -124,3 +124,9 @@ function remove_order_notes( $fields ) {
 }
 add_filter( 'woocommerce_checkout_fields' , 'remove_order_notes' );
 
+/**
+ * Remove permalink & thumbnail of product from cart, mini cart & order item in WooCommerce
+ */
+add_filter( 'woocommerce_cart_item_permalink',  '__return_empty_string' );
+add_filter( 'woocommerce_cart_item_thumbnail',  '__return_empty_string' );
+add_filter( 'woocommerce_order_item_permalink', '__return_empty_string');
