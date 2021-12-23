@@ -38,3 +38,14 @@ add_action( 'woocommerce_product_options_general_product_data', 'wplms_hide_and_
  */
 add_filter( 'woocommerce_is_sold_individually', '__return_true' );
 
+/**
+ * Replace ex. VAT with ex. GST
+ *
+ * @param [string] $label
+ * @return string
+ */
+function wplms_tax_label( $label ) {
+    return 'ex. GST';
+}
+add_filter( 'woocommerce_countries_ex_tax_or_vat', 'wplms_tax_label', 20 );
+
