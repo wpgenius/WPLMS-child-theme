@@ -151,6 +151,34 @@ ul.course_curriculum li.course_section>label {
     right: 90px;
 }
 
+/*********** BLOG PAGE *********/
+.blogpost_author strong {
+    font-weight: 400;
+    font-size: 15px;
+}
+.blog .content {
+    padding-left: 0;
+}
+/* blog post layout 3*/
+.blogpost_style3 .link {
+    margin-left: 0;
+}
+.blogpost_style3 h3 {
+    font-size: 21px;
+}
+.blogpost_style3 h3 a {
+    font-weight: 600;
+}
+.blogpost_style3 .post-categories li {
+    color: #ffffff;
+    background: #D2355D;
+    padding: 2px 4px 2px 8px;
+}
+.blogpost_style3 .post-categories li a {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #ffffff;
+}
 /* WooCommerce */
 .woocommerce-order-details table {
     background: #fdfdfd;
