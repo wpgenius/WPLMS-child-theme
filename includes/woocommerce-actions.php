@@ -130,3 +130,13 @@ add_filter( 'woocommerce_checkout_fields' , 'remove_order_notes' );
 add_filter( 'woocommerce_cart_item_permalink',  '__return_empty_string' );
 add_filter( 'woocommerce_cart_item_thumbnail',  '__return_empty_string' );
 add_filter( 'woocommerce_order_item_permalink', '__return_empty_string');
+
+/**
+ * Auto Complete all WooCommerce orders.
+ * 
+ * If product is virtual & downloadable then order marked as complete. 
+ * In below code I have returned false to order_item_needs_processing? & every order goes to complete status.
+ * If need to check for virual only orders then need to write a function to check product is virtual or not? $_product->is_virtual()
+ */
+add_filter( 'woocommerce_order_item_needs_processing', '__return_false' );
+
