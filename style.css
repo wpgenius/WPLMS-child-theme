@@ -7,6 +7,28 @@ Author URI:     https://wpgenius.in
 Template:       wplms
 Version:        0.1.0
 */
+/****** COMMON CSS *******/
+body, p {
+    font-weight: 300;
+}
+b, dt, strong, h1 a, h2 a, h3 a, h4 a {
+    font-weight: 600;
+}
+blockquote+p, h3+p, ol+ul, p+blockquote, p+h3, p+p, p+ul, ul+ol, ul+p {
+    margin-top: 15px;
+}
+.content h4 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.content>ul {
+    margin-left: 20px;
+}
+.content>ul li {
+    font-weight: 300;
+    line-height: 21px;
+    padding-bottom: 10px;
+}
 
 /********** 404 ERROR PAGE *********/
 .error-page-wrapper {
