@@ -10,7 +10,7 @@ get_header(vibe_get_header());
 				<div class="col-md-2"></div>
 				<div class="col-md-8 text-center">
 					<div class="search_wrapper">
-						<form method="GET" action="https://ch-lms.tyche.work">
+						<form method="GET" action="<?php echo site_url(); ?>">
 					        <input type="hidden" name="post_type" value="course">                 
 					        <input type="text" name="s" placeholder="Search courses.." value="">
 						</form>
