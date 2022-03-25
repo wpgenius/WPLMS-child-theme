@@ -68,6 +68,12 @@ ul.topmenu .vbpcart  span.vicon-shopping-cart.active:after {
 /********** FOOTER **********/
 
 
+/********** PWA **********/
+
+.bp-vibebp .menu-child.downloads {
+    display: none !important;
+}
+
 /******** COURSE PAGE *********/
 .course_curriculum .course_lesson span {
     font-size: 13px !important;
